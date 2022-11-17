@@ -1,0 +1,65 @@
+﻿
+@{
+    ViewBag.Title = "HienThiMotSach";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>HienThiHaiDS</title>
+</head>
+<body>
+    <table border="1" style="border-collapse:collapse" cellpadding="5">
+        <h3>Các cuốn sách có giá 100đ</h3>
+        <br />
+        <tr>
+            <th>Mã sách</th>
+            <th>Tên sách</th>
+            <th>Số lượng</th>
+            <th>Giá tiền</th>
+            <th>Tổng tiền</th>
+        </tr>
+        @foreach (var item in ViewBag.List)
+        {
+            if (item.giatien == 100)
+            {
+                <tr>
+                    <td>@item.masach</td>
+                    <td>@item.tensach</td>
+                    <td>@item.soluong</td>
+                    <td>@item.giatien</td>
+                    <td>@item.tongtien</td>
+                </tr>
+            }
+        }
+    </table>
+    <br />
+    <table border="1" style="border-collapse:collapse" cellpadding="5">
+        <h3>Các cuốn sách có số trang là 200</h3>
+        <br />
+        <tr>
+            <th>Mã sách</th>
+            <th>Tên sách</th>
+            <th>Số lượng</th>
+            <th>Giá tiền</th>
+            <th>Tổng tiền</th>
+        </tr>
+        @foreach (var item in ViewBag.List)
+        {
+            if (item.soluong == 2)
+            {
+                <tr>
+                    <td>@item.masach</td>
+                    <td>@item.tensach</td>
+                    <td>@item.soluong</td>
+                    <td>@item.giatien</td>
+                    <td>@item.tongtien</td>
+                </tr>
+            }
+        }
+    </table>
+</body>
+</html>

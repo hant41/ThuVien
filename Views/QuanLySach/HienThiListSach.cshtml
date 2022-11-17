@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "HienThiMotSach";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>HienThiListSach</title>
+</head>
+<body>
+    <br />
+    <h3>Danh sách các cuốn sách</h3>
+    <table border="1" style="border-collapse:collapse" cellpadding="5">
+        <tr>
+            <th>Mã sách</th>
+            <th>Tên sách</th>
+            <th>Số lượng</th>
+            <th>Giá tiền</th>
+            <th>Tổng tiền</th>
+        </tr>
+        @foreach (var item in ViewBag.List)
+        {
+            <tr>
+                <td>@item.masach</td>
+                <td>@item.tensach</td>
+                <td>@item.soluong</td>
+                <td>@item.giatien</td>
+                <td>@item.tongtien</td>
+            </tr>
+        }
+    </table>
+</body>
+</html>

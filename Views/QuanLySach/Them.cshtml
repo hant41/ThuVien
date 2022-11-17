@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "HienThiMotSach";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Them</title>
+</head>
+<body>
+    @using (Html.BeginForm("HienThiListSach", "QuanLySach"))
+    {
+        <table>
+            <tr>
+                <td>@Html.Label("Mã sách")</td>
+                <td>@Html.TextBox("masach")</td>
+            </tr>
+            <tr>
+                <td>@Html.Label("Tên sách")</td>
+                <td>@Html.TextBox("tensach")</td>
+            </tr>
+            <tr>
+                <td>@Html.Label("Số lượng")</td>
+                <td>@Html.TextBox("soluong")</td>
+            </tr>
+            <tr>
+                <td>@Html.Label("Giá tiền")</td>
+                <td>@Html.TextBox("giatien")</td>
+            </tr>
+
+            <tr>
+                <td><input type="submit" value="Them" /></td>
+            </tr>
+        </table>
+    }
+</body>
+</html>

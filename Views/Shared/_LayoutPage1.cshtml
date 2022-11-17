@@ -1,0 +1,58 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nguyễn Hà</title>
+    <link href="~/Content/StyleSheet1.css" rel="stylesheet" />
+    <style type="text/css">
+        th, td {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+        <div class="container">
+            <div class="header">
+                <h1>Nguyễn Thị Hà</h1>
+            </div>
+
+            <div class="content">
+                        @RenderBody()
+            </div>
+            <div class="sidebar">
+                <div class="sidebar-inner">
+                    <h2>Danh mục</h2>
+                    <ul>
+                        <li>
+                            <a href="/QuanLySach/Index">
+                                Nhập 1 cuốn sách<br>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/QuanLySach/HienThiListSach">
+                                Xem danh sách <br>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/QuanLySach/Them">
+                                Thêm 1 cuốn sách<br>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/QuanLySach/HienThiHaiDS">
+                                Xem 2 danh sách<br>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer">
+                <p>&copy; Bài kiểm tra thường xuyên 1</p>
+            </div>
+        </div>
+</body>
+</html>
+
